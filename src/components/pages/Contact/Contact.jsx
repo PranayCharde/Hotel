@@ -124,8 +124,8 @@ export default function Contact() {
                         </div>
                         <div>
                             <h3 className="text-xl font-bold text-dark-900 mb-1">Email</h3>
-                            <p className="text-gray-600">reservations@elitehotels.com</p>
-                            <p className="text-gray-600">info@elitehotels.com</p>
+                            <p className="text-gray-600">reservations@PATILhotels.com</p>
+                            <p className="text-gray-600">info@PATILhotels.com</p>
                         </div>
                     </div>
                 </div>

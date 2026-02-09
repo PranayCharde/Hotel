@@ -1,15 +1,9 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useRef } from 'react'
+import WindowFrame from '../../common/WindowFrame'
 
 export default function Offers() {
   const containerRef = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  })
-  
-  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"])
-
   return (
     <section ref={containerRef} className="py-24 px-8 bg-gold-50 overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -127,27 +121,14 @@ export default function Offers() {
           </div>
 
           {/* Feature Image */}
-          <motion.div 
-            initial={{ opacity: 0, y: -100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            viewport={{ amount: 0.3 }}
-            className="relative h-[600px] overflow-hidden rounded-3xl shadow-2xl"
+          <WindowFrame 
+             src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1974&auto=format&fit=crop"
+             alt="Special Offer Room"
+             height="h-[600px]"
+             className="rounded-3xl shadow-2xl"
           >
-            <motion.img 
-               style={{ y }}
-               initial={{ scale: 1.3 }}
-               whileInView={{ scale: 1.1 }}
-               transition={{ duration: 1.5, ease: "easeOut" }}
-               viewport={{ amount: 0.3 }}
-               whileHover={{ scale: 1.25 }}
-               src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1974&auto=format&fit=crop" 
-               alt="Special Offer Room" 
-               className="w-full h-full object-cover"
-            />
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-          </motion.div>
+             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
+          </WindowFrame>
         </div>
 
       </div>

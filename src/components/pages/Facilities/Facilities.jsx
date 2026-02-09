@@ -2,44 +2,7 @@ import { motion } from 'framer-motion'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const facilities = [
-    {
-        id: "spa",
-        title: "The Royal Spa",
-        subtitle: "A Sanctuary for the Senses",
-        description: "Immerse yourself in tranquility at our world-class spa. Offering a range of holistic treatments inspired by ancient traditions and modern wellness techniques, our expert therapists are dedicated to your rejuvenation.",
-        features: ["Thermal Suites", "Hydrotherapy Pool", "Private Treatment Villas", "Wellness Cafe"],
-        // image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2070&auto=format&fit=crop",
-        reverse: false
-    },
-    {
-        id: "fitness",
-        title: "Elite Fitness Center",
-        subtitle: "Peak Performance, Premium Equipment",
-        description: "Maintain your regimen in our state-of-the-art fitness center, equipped with the latest Technogym cardio and resistance machines. Personal trainers are available upon request to guide your workout.",
-        features: ["24/7 Access", "Technogym Equipment", "Yoga Studio", "Personal Training"],
-        image: "https://images.unsplash.com/photo-1540497077202-7c8a33801f05?q=80&w=2070&auto=format&fit=crop",
-        reverse: true
-    },
-    {
-        id: "pool",
-        title: "Infinity Pool",
-        subtitle: "Swim with a View",
-        description: "Our stunning infinity pool blends seamlessly with the horizon, offering breathtaking views of the city skyline. Relax in a private cabana or enjoy a refreshing cocktail from the poolside bar.",
-        features: ["Heated Water", "Private Cabanas", "Poolside Bar", "Towel Service"],
-        image: "https://images.unsplash.com/photo-1572331165267-854da2b00ca1?q=80&w=2070&auto=format&fit=crop",
-        reverse: false
-    },
-    {
-        id: "dining",
-        title: "Fine Dining",
-        subtitle: "Culinary Excellence",
-        description: "Embark on a gastronomic journey at our award-winning restaurants. From authentic local cuisine to international favorites, our chefs use only the finest ingredients to create unforgettable dining experiences.",
-        features: ["Michelin-starred Chefs", "Private Dining Rooms", "Wine Cellar", "Rooftop Terrace"],
-        image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop",
-        reverse: true
-    }
-]
+import FacilityList from './FacilityList'
 
 export default function FacilitiesPage() {
     useEffect(() => {
@@ -47,7 +10,7 @@ export default function FacilitiesPage() {
     }, [])
 
     return (
-        <div className="/*pt-20 min-h-screen bg-white*/">
+        <div className=" min-h-screen bg-white overflow-x-hidden">
             {/* Header Section */}
             <section className="bg-dark-900 text-white py-29 px-8 text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
@@ -82,55 +45,12 @@ export default function FacilitiesPage() {
             </section>
 
             {/* Facilities Sections */}
-            <div className="py-20 px-8 max-w-[1400px] mx-auto space-y-32">
-                {facilities.map((facility, index) => (
-                    <motion.div 
-                        key={facility.id}
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ amount: 0.2, once: true }}
-                        transition={{ duration: 0.8 }}
-                        className={`flex flex-col ${facility.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-16 items-center`}
-                    >
-                         {/* Image */}
-                        <div className="w-full lg:w-1/2 relative group">
-                            <div className="absolute inset-0 bg-gold-500 transform translate-x-4 translate-y-4 rounded-3xl -z-10 transition duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
-                            <div className="overflow-hidden rounded-3xl shadow-2xl">
-                                <motion.img 
-                                    whileHover={{ scale: 1.05 }}
-                                    transition={{ duration: 0.7 }}
-                                    src={facility.image} 
-                                    alt={facility.title} 
-                                    className="w-full h-[500px] object-cover"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Content */}
-                        <div className="w-full lg:w-1/2 space-y-6">
-                            <div className="flex items-center space-x-3 text-gold-600 mb-2">
-                                <span className="text-sm font-bold tracking-widest uppercase">{facility.subtitle}</span>
-                            </div>
-                            <h2 className="text-4xl md:text-5xl font-serif text-dark-900 leading-tight">{facility.title}</h2>
-                            <p className="text-gray-600 text-lg leading-relaxed">{facility.description}</p>
-                            
-                            <div className="grid grid-cols-2 gap-4 pt-6">
-                                {facility.features.map((feature, i) => (
-                                    <div key={i} className="flex items-center space-x-2 text-gray-700">
-                                        <span className="text-gold-500">✦</span>
-                                        <span>{feature}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </motion.div>
-                ))}
-            </div>
+            <FacilityList />
             
              {/* CTA Section */}
             <section className="bg-gold-50 py-24 px-8 text-center mt-20">
                  <div className="max-w-3xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-serif text-dark-900 mb-6">Ready to Experience Elite Luxury?</h2>
+                    <h2 className="text-3xl md:text-4xl font-serif text-dark-900 mb-6">Ready to Experience PATIL Luxury?</h2>
                     <p className="text-gray-600 mb-8">Book your stay today and enjoy exclusive access to all our premium facilities.</p>
                      <button className="bg-dark-900 text-white px-10 py-4 rounded-full font-bold uppercase text-sm tracking-widest hover:bg-gold-600 transition duration-300 shadow-xl">
                         Book Your Stay Now

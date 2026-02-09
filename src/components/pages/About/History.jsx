@@ -4,7 +4,7 @@ const history = [
   {
     year: "1985",
     title: "The Beginning",
-    description: "Founded by the visionary hotelier, James Elite, with a single property in Paris."
+    description: "Founded by the visionary hotelier, James PATIL, with a single property in Paris."
   },
   {
     year: "1995",

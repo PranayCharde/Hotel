@@ -19,9 +19,10 @@
   --color-wood: #3e3228;
 }
 
-body {
+html, body {
   font-family: var(--font-sans);
   color: var(--color-dark-900);
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {

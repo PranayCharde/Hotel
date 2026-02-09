@@ -17,7 +17,7 @@ export default function Sustainability() {
                      <span className="text-green-800 font-bold uppercase tracking-widest text-sm mb-2 block">Our Commitment</span>
                     <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-6">Sustainable Luxury</h2>
                     <p className="text-gray-600 leading-relaxed mb-6 text-lg">
-                        At Elite Hotels, we believe that luxury stays shouldn't cost the Earth. We are dedicated to minimizing our environmental footprint while maintaining the highest standards of hospitality.
+                        At PATIL Hotels, we believe that luxury stays shouldn't cost the Earth. We are dedicated to minimizing our environmental footprint while maintaining the highest standards of hospitality.
                     </p>
                     <ul className="space-y-4 mb-8">
                         {["Zero-waste kitchens", "Solar-powered heating", "Locally sourced amenities", "Paperless check-in"].map((item, i) => (
@@ -36,7 +36,7 @@ export default function Sustainability() {
                      transition={{ duration: 0.8 }}
                     className="grid grid-cols-2 gap-4"
                 >
-                    <img src="https://images.unsplash.com/photo-1518531933037-9a847e0f3886?q=80&w=1887&auto=format&fit=crop" className="rounded-2xl shadow-lg w-full h-64 object-cover mt-12" alt="Nature" />
+                    <img src="src/assets/gl0.webp" className="rounded-2xl shadow-lg w-full h-64 object-cover mt-12" alt="Nature" />
                     <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=2074&auto=format&fit=crop" className="rounded-2xl shadow-lg w-full h-64 object-cover" alt="Garden" />
                 </motion.div>
 

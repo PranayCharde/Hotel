@@ -1,22 +1,26 @@
 import { motion } from 'framer-motion'
 
+import romanSuslovImg from '../../../assets/roman-suslov-mW45Jp3xATI-unsplash.jpg'
+import ambitiousStudioImg from '../../../assets/ambitious-studio-rick-barrett-Ksl3D9tlfWs-unsplash.jpg'
+import antonioAraujoImg from '../../../assets/antonio-araujo-67DQVOLWN3c-unsplash.jpg'
+
 const facilities = [
     {
         id: "spa",
-        title: "The Royal Spa",
+        title: "The Royal Games",
         subtitle: "A Sanctuary for the Senses",
         description: "Immerse yourself in tranquility at our world-class spa. Offering a range of holistic treatments inspired by ancient traditions and modern wellness techniques, our expert therapists are dedicated to your rejuvenation.",
         features: ["Thermal Suites", "Hydrotherapy Pool", "Private Treatment Villas", "Wellness Cafe"],
-        // image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2070&auto=format&fit=crop",
+        image: romanSuslovImg,
         reverse: false
     },
     {
         id: "fitness",
-        title: "Elite Fitness Center",
+        title: "PATIL Fitness Center",
         subtitle: "Peak Performance, Premium Equipment",
         description: "Maintain your regimen in our state-of-the-art fitness center, equipped with the latest Technogym cardio and resistance machines. Personal trainers are available upon request to guide your workout.",
         features: ["24/7 Access", "Technogym Equipment", "Yoga Studio", "Personal Training"],
-        image: "https://images.unsplash.com/photo-1540497077202-7c8a33801f05?q=80&w=2070&auto=format&fit=crop",
+        image: ambitiousStudioImg,
         reverse: true
     },
     {
@@ -25,7 +29,7 @@ const facilities = [
         subtitle: "Swim with a View",
         description: "Our stunning infinity pool blends seamlessly with the horizon, offering breathtaking views of the city skyline. Relax in a private cabana or enjoy a refreshing cocktail from the poolside bar.",
         features: ["Heated Water", "Private Cabanas", "Poolside Bar", "Towel Service"],
-        image: "https://images.unsplash.com/photo-1572331165267-854da2b00ca1?q=80&w=2070&auto=format&fit=crop",
+        image: antonioAraujoImg,
         reverse: false
     },
     {

@@ -16,7 +16,7 @@ const offers = [
     subtitle: "Staycation Special",
     description: "Take a break from the city bustle. Indulge in our spa facilities, enjoy a gourmet breakfast, and relax in our luxurious rooms.",
     price: "From $550 / night",
-    // image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/francesca-saraco-_dS27XGgRyQ-unsplash.jpg",
     features: ["Daily Breakfast Buffet", "$100 Spa Credit", "Access to Fitness Center", "Free Wi-Fi"]
   },
   {
@@ -25,12 +25,12 @@ const offers = [
     subtitle: "Memories to Last a Lifetime",
     description: "The perfect vacation for the whole family. Kids eat free, and we offer a range of activities to keep everyone entertained.",
     price: "From $950 / night",
-    image: "https://images.unsplash.com/photo-1571896349842-6e53ce41e86a?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/valeriia-bugaiova-_pPHgeHz1uk-unsplash.jpg",
     features: ["Kids Eat Free (under 12)", "Family Room Upgrade", "Kids' Club Access", "Welcome Gift for Kids"]
   },
   {
     id: 4,
-    title: "Business Elite",
+    title: "Business PATIL",
     subtitle: "Work & Relax",
     description: "Seamlessly blend business with leisure. High-speed internet, meeting room access, and express laundry service included.",
     price: "From $600 / night",

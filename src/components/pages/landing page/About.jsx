@@ -1,16 +1,9 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useRef } from 'react'
+import WindowFrame from '../../common/WindowFrame'
 
 export default function About() {
   const containerRef = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  })
-  
-  const y1 = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"])
-  const y2 = useTransform(scrollYProgress, [0, 1], ["10%", "-10%"])
-
   return (
     <section id="about" ref={containerRef} className="py-20 px-8 bg-gold-50 overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
@@ -19,24 +12,12 @@ export default function About() {
           {/* Column 1: Image & Stat */}
           <div className="flex flex-col space-y-12">
             {/* Image 1 */}
-            <motion.div 
-              initial={{ opacity: 0, y: -100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              viewport={{ amount: 0.3 }}
-              className="overflow-hidden rounded-3xl shadow-2xl h-[400px]"
-            >
-              <motion.img 
-                style={{ y: y1 }}
-                initial={{ scale: 1.3 }}
-                whileInView={{ scale: 1.1 }} // Increased scale to avoid empty start
-                transition={{ duration: 1.5, ease: "easeOut" }}
-                viewport={{ amount: 0.3 }}
-                src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop" 
-                alt="Luxury Hotel Room" 
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
+            <WindowFrame 
+              src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop"
+              alt="Luxury Hotel Room"
+              height="h-[400px]"
+              className="rounded-3xl shadow-2xl"
+            />
 
             {/* Stat 1 */}
             <motion.div 
@@ -136,24 +117,14 @@ export default function About() {
           </div>
 
           {/* Column 3: Image 2 */}
-           <motion.div 
-              initial={{ opacity: 0, y: -100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-              viewport={{ amount: 0.3 }}
-              className="overflow-hidden rounded-3xl shadow-2xl h-[500px] lg:mt-12"
-            >
-              <motion.img 
-                style={{ y: y2 }}
-                initial={{ scale: 1.3 }}
-                whileInView={{ scale: 1.1 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
-                viewport={{ amount: 0.3 }}
-                src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2070&auto=format&fit=crop" 
-                alt="Luxury Hotel Interior" 
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
+          <div className="lg:mt-12">
+             <WindowFrame 
+                src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2070&auto=format&fit=crop"
+                alt="Luxury Hotel Interior"
+                height="h-[500px]"
+                className="rounded-3xl shadow-2xl"
+             />
+          </div>
 
         </div>
       </div>

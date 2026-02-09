@@ -9,7 +9,7 @@ export default function LoyaltyProgram() {
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ amount: 0.3 }}
-                        src="https://images.unsplash.com/photo-1565596067086-4556487eec71?q=80&w=2070&auto=format&fit=crop" 
+                        src="src/assets/visualsofdana-T5pL6ciEn-I-unsplash.jpg" 
                         alt="Loyalty Card" 
                         className="rounded-2xl shadow-xl w-full"
                     />
@@ -20,7 +20,7 @@ export default function LoyaltyProgram() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ amount: 0.3 }}
                       >
-                           <h2 className="text-4xl font-serif text-dark-900 mb-6">Elite Rewards Program</h2>
+                           <h2 className="text-4xl font-serif text-dark-900 mb-6">PATIL Rewards Program</h2>
                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
                                Join our loyalty program and earn points for every stay. Unlock exclusive benefits including:
                            </p>

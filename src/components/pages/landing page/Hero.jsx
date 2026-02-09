@@ -19,7 +19,7 @@ export default function Hero() {
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 10, ease: "linear" }}
-        className="absolute inset-0 bg-[url('src/assets/hr1-3.webp')] bg-cover bg-center"
+        className="absolute inset-0 bg-[url('public/hr1-3.webp')] bg-cover bg-center"
       ></motion.div>
 
       {/* Content */}
@@ -38,7 +38,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-8"
         >
-          ELITE HOTELS
+          PATIL HOTELS
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 30 }}

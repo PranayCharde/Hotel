@@ -1,3 +1,5 @@
+import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react'
+
 export default function Footer() {
   return (
     <footer className="bg-dark-900 text-white pt-20 pb-10">
@@ -5,10 +7,24 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Logo & Desc */}
           <div>
-            <div className="text-2xl font-serif font-bold tracking-wider mb-6">ELITE HOTELS</div>
+            <div className="text-2xl font-serif font-bold tracking-wider mb-6">PATIL HOTELS</div>
             <p className="text-gray-400 leading-relaxed mb-6">
               Experience the pinnacle of luxury and hospitality. Your perfect getaway awaits.
             </p> 
+            <div className="flex space-x-4">
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-white transition duration-300">
+                <Facebook size={20} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-white transition duration-300">
+                <Instagram size={20} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-white transition duration-300">
+                <Twitter size={20} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-white transition duration-300">
+                <Linkedin size={20} />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -28,7 +44,7 @@ export default function Footer() {
              <ul className="space-y-4 text-gray-300">
               <li>123 Luxury Avenue, Paradise City</li>
               <li>+1 (555) 123-4567</li>
-              <li>info@elitehotels.com</li>
+              <li>info@PATILhotels.com</li>
             </ul>
           </div>
 
@@ -50,7 +66,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
-          &copy; 2026 Elite Hotels. All rights reserved.
+          &copy; 2026 PATIL Hotels. All rights reserved.
         </div>
       </div>
     </footer>
