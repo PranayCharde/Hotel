@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
+import image from '../../../assets/hr1-3.webp'
 
 export default function Hero() {
   const ref = useRef(null)
@@ -15,11 +16,11 @@ export default function Hero() {
       {/* Background Image - Scale Effect */}
       <div className="absolute inset-0 bg-black/40 z-10"></div>
       <motion.div 
-        style={{ y }}
+        style={{ y, backgroundImage: `url(${image})` }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 10, ease: "linear" }}
-        className="absolute inset-0 bg-[url('public/hr1-3.webp')] bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center"
       ></motion.div>
 
       {/* Content */}
